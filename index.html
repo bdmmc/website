@@ -1,168 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Drum Digital</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
-            margin: 0;
-            padding: 0;
-            background-color: #171717; /* Darker background */
-            color: #ffffff;
-        }
-
-        header {			
-            background-color: #2D3956;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px; /* Enlarged padding */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            font-size: 22px; /* Enlarged font size */
-        }
-
-        nav {
-            background-color: #3b3b3b; /* Darker background */
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        nav a {
-            float: left;
-            display: block;
-            color: #ffffff; /* Adjusted color */
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #445566; /* Adjusted color */
-            color: #ffffff;
-        }
-
-        section {
-            padding: 20px;
-            background-color: #232323; /* Darker background */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            margin: 20px;
-        }
-		
-		footer {
+body {
+    font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
+    margin: 0;
+    padding: 0;
+    background-color: #171717; /* Darker background */
+    color: #ffffff;
+}
+header {
+    background-color: #2D3956;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px; /* Enlarged padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 22px; /* Enlarged font size */
+}
+nav {
+    background-color: #3b3b3b; /* Darker background */
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+nav a {
+    float: left;
+    display: block;
+    color: #ffffff; /* Adjusted color */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+nav a:hover {
+    background-color: #445566; /* Adjusted color */
+    color: #ffffff;
+}
+section {
+    padding: 20px;
+    background-color: #232323; /* Darker background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 20px;
+}
+footer {
     background-color: #2D3956;
     color: #ffffff;
     text-align: center;
     padding: 10px;
-    position:relative;
+    position: relative;
     bottom: 0;
     width: 100%;
     font-size: 14px; /* Adjusted font size for smaller text */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.project-item {
+    width: 30%;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+.project-item:hover {
+    transform: scale(1.05);
+}
+img {
+    width: 100%;
+    height: auto;
+}
 
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .project-item {
-            width: 30%;
-            margin: 10px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
-
-        .project-item:hover {
-            transform: scale(1.05);
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-        @media only screen and (max-width: 600px) {
-            nav a {
-                float: none;
-                width: 100%;
-                text-align: center;
-            }
-
-            .project-item {
-                width: 100%;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-	
-        <h1>Blue Drum Digital</h1>
+@media only screen and (max-width: 600px) {
+nav a {
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+.project-item {
+    width: 100%;
+}
+}
+</style>
+    </head>
+    <body>
+<header>
+      <h1><img src="https://github.com/bdmmc/assets-images/blob/main/BD_logo1x1.png?raw=true" style="width:45px; height:auto; text-align: left; vertical-align: middle; margin-right:10px; margin-bottom:5px">Blue Drum Digital</h1>
     </header>
-
-    <nav>
-        <a href="https://www.bluedrummedia.com/home">Home</a>
- 
-        <a href="https://www.bluedrummedia.com/contact">Contact</a>
-    </nav>
-
-    <section>
-        <h2>Take your email program further.</h2>
-        <p> With a focus on the health care sector, we design and execute high-performing email experiences. From quick staff announcements to fully integrated campaigns with dynamic segmentation and landing page ecosystems, we take care of the complexity for you. Structure, testing, and deliverability—all handled—so your communications reach the right audience at the right time.</p>
+<nav> <a href="/index">Home</a> <a href="/about">Contact</a> </nav>
+<section>
+      <h2>Take your email further.</h2>
+      <p> With a focus in the health care sector, we design and execute high-performing email programs. From quick staff announcements to fully integrated campaigns with dynamic segmentation and landing page ecosystems, we take care of the complexity for you. Structure, testing, and deliverability—all handled—so your communications reach the right audience at the right time.</p>
     </section>
-
-    <section id="projects" class="projects"><a name="expertise"></a> <div class="project-item">
-            <img src="https://github.com/bdmmc/assets-images/blob/main/segmentation_square.jpg?raw=true" alt="Project 3">
-            <p>List Segmentation & Infrastructure</p>
-        </div>
-		 <div class="project-item">
-            <img src="https://github.com/bdmmc/assets-images/blob/main/analytics1x1.jpg?raw=true" alt="Project 4">
-            <p>Insights & Analytics</p>
-        </div>
-		<div class="project-item">
-            <img src="https://github.com/bdmmc/assets-images/blob/main/destkop_mobile-render1536x1536.png?raw=true" alt="Project 3">
-            <p>Desktop & Mobile Device Optimization</p>
-        </div>
-		  <div class="project-item">
-            <img src="https://github.com/bdmmc/assets-images/blob/main/html_css_example.png?raw=true" alt="Project 3">
-            <p>HTML/CSS Support</p>
-        </div>
-		  
-		    <div class="project-item">
-            <img src="https://github.com/bdmmc/assets-images/blob/main/IT-Updates.jpg?raw=true" alt="Project 2">
-            <p>IT & Software Updates</p>
-        </div>
-		 <div class="project-item">
-            <img src="https://github.com/bdmmc/assets-images/blob/main/employee_benefits01.jpg?raw=true" alt="Project 3">
-            <p>Employee Benefits Campaigns</p>
-        </div>
-	 
-		
-			  
-		
-		
-		
-     
-		 
+<section id="projects" class="projects"><a name="expertise"></a>
+      <div class="project-item"> <img src="https://github.com/bdmmc/assets-images/blob/main/segmentation_square.jpg?raw=true" alt="Project 3">
+    <p>List Segmentation & Infrastructure</p>
+  </div>
+      <div class="project-item"> <img src="https://github.com/bdmmc/assets-images/blob/main/analytics1x1.jpg?raw=true" alt="Project 4">
+    <p>Insights & Analytics</p>
+  </div>
+      <div class="project-item"> <img src="https://github.com/bdmmc/assets-images/blob/main/destkop_mobile-render1536x1536.png?raw=true" alt="Project 3">
+    <p>Desktop & Mobile Optimization</p>
+  </div>
+      <div class="project-item"> <img src="https://github.com/bdmmc/assets-images/blob/main/html_css_example.png?raw=true" alt="Project 3">
+    <p>HTML/CSS Support</p>
+  </div>
+      <div class="project-item"> <img src="https://github.com/bdmmc/assets-images/blob/main/IT-Updates.jpg?raw=true" alt="Project 2">
+    <p>IT & Software Updates</p>
+  </div>
+      <div class="project-item"> <img src="https://github.com/bdmmc/assets-images/blob/main/employee_benefits01.jpg?raw=true" alt="Project 3">
+    <p>Employee Benefits Campaigns</p>
+  </div>
       
-    
-		
-		
-		
-        <!-- Add more project items with images and descriptions as needed -->
+      <!-- Add more project items with images and descriptions as needed --> 
     </section>
-	
-	   <footer>
-        <p>&copy; 2026 Blue Drum Media. All Rights Reserved.</p>
+<footer>
+      <p>&copy; 2026 Blue Drum Media. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>
