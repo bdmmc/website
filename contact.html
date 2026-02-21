@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDD</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+    <style>
+body {
+    font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
+    margin: 0;
+    padding: 0;
+    background-color: #171717; /* Darker background */
+    color: #ffffff;
+}
+header {
+    background-color: #2D3956;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px; /* Enlarged padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 22px; /* Enlarged font size */
+}
+nav {
+    background-color: #3b3b3b; /* Darker background */
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+nav a {
+    float: left;
+    display: block;
+    color: #ffffff; /* Adjusted color */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+nav a:hover {
+    background-color: #445566; /* Adjusted color */
+    color: #ffffff;
+}
+section {
+    padding: 20px;
+    background-color: #232323; /* Darker background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 20px;
+}
+footer {
+    background-color: #2D3956;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px; /* Adjusted font size for smaller text */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.project-item {
+    width: 30%;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+.project-item:hover {
+    transform: scale(1.05);
+}
+		
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row input {
+    flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    background: #3b3b3b;
+    color: white;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #445566;
+}
+
+.contact-form button {
+    background: #2D3956;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #445566;
+}
+		
+		
+img {
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+nav a {
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+.project-item {
+    width: 100%;
+}
+}
+</style>
+    </head>
+    <body>
+<header>
+      <h1>Blue Drum Digital</h1>
+    </header>
+<nav> <a href="https://www.bluedrummedia.com/">Home</a><a href="https://www.bluedrummedia.com/contact">Contact</a> </nav>
+<section id="contact">
+    <h2>Contact</h2>
+
+    <form 
+        action="https://docs.google.com/forms/d/e/1FAIpQLSca66JfpZLFVcy5fSsCGK-oINTvrs-qoVjVvc5pzt0qpLDJ3w/formResponse" 
+        method="POST" 
+        target="_blank" 
+        class="contact-form">
+
+        <div class="form-row">
+          <input type="text" name="entry.954487327" placeholder="Name" required>
+        </div>
+
+        <input type="email" name="entry.135111267" placeholder="Email Address" required>
+
+        <textarea name="entry.1649445465" rows="5" placeholder="How can we help you?" required></textarea>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</section>
+<footer>
+      <p>&copy; 2026 Blue Drum Media.  All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
