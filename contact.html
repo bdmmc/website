@@ -1,79 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Drum Digital</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
-    <style>
-body {
-    font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Drum Digital</title>
+<!-- Loaded multiple weights of Poppins: 300 (Light), 400 (Regular), and 700 (Bold) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+<style>
+:root {
+ --bg-main: #171717;
+ --bg-section: #232323;
+ --brand-blue: #2D3956;
+ --nav-bg: #3b3b3b;
+ --nav-hover: #445566;
+ --text-white: #ffffff;
+ --transition: all 0.3s ease;
+}
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #171717; /* Darker background */
-    color: #ffffff;
 }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-white);
+    line-height: 1.6;
+    font-weight: 300;
+}
+/* --- Header --- */
 header {
-    background-color: #2D3956;
-    color: #ffffff;
+    background-color: var(--brand-blue);
+    color: var(--text-white);
     text-align: center;
-    padding: 10px; /* Enlarged padding */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-size: 22px; /* Enlarged font size */
+    padding: 2rem 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+header h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header img {
+    width: 45px;
+    height: auto;
+    margin-right: 15px;
+}
+/* --- Navigation --- */
 nav {
-    background-color: #3b3b3b; /* Darker background */
-    overflow: hidden;
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 nav a {
-    float: left;
-    display: block;
-    color: #ffffff; /* Adjusted color */
+    color: var(--text-white);
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 25px;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: var(--transition);
+    font-weight: 400;
 }
 nav a:hover {
-    background-color: #445566; /* Adjusted color */
-    color: #ffffff;
+    background-color: var(--nav-hover);
 }
-section {
+/* --- Main Content --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #232323; /* Darker background */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    margin: 20px;
 }
-footer {
-    background-color: #2D3956;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    font-size: 14px; /* Adjusted font size for smaller text */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+section.intro {
+    padding: 40px;
+    background-color: var(--bg-section);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    margin: 20px 0 40px 0;
+    border: 1px solid rgba(255,255,255,0.05);
+    text-align: center
 }
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.intro p {
+    font-size: 1.15rem;
+    max-width: 800px;
+}
+/* --- Projects Grid --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
 }
 .project-item {
-    width: 30%;
-    margin: 10px;
-    border-radius: 8px;
+    background-color: var(--bg-section);
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+    border: 1px solid rgba(255,255,255,0.05);
+    text-align: center;
 }
 .project-item:hover {
-    transform: scale(1.05);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    border-color: var(--brand-blue);
 }
-		
+.project-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
 .contact-form {
     max-width: 600px;
     margin: auto;
@@ -81,18 +127,14 @@ footer {
     flex-direction: column;
     gap: 15px;
 }
-
 .form-row {
     display: flex;
     gap: 15px;
 }
-
 .form-row input {
     flex: 1;
 }
-
-.contact-form input,
-.contact-form textarea {
+.contact-form input, .contact-form textarea {
     padding: 12px;
     border-radius: 6px;
     border: none;
@@ -100,12 +142,9 @@ footer {
     color: white;
     font-size: 14px;
 }
-
-.contact-form input:focus,
-.contact-form textarea:focus {
+.contact-form input:focus, .contact-form textarea:focus {
     outline: 2px solid #445566;
 }
-
 .contact-form button {
     background: #2D3956;
     color: white;
@@ -116,12 +155,9 @@ footer {
     cursor: pointer;
     transition: background 0.3s;
 }
-
 .contact-form button:hover {
     background: #445566;
 }
-		
-		
 img {
     width: 100%;
     height: auto;
@@ -136,39 +172,61 @@ nav a {
 .project-item {
     width: 100%;
 }
+.project-item p {
+    padding: 20px;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+}
+/* --- Footer --- */
+footer {
+    background-color: var(--brand-blue);
+    color: var(--text-white);
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 14px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+
+/* --- Mobile Layout --- */
+@media only screen and (max-width: 600px) {
+nav {
+    flex-direction: column;
+}
+nav a {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+section.intro {
+    padding: 25px;
+}
 }
 </style>
-    </head>
-    <body>
+</head>
+<body>
 <header>
-      <h1><img src="https://github.com/bdmmc/assets-images/blob/main/BD_logo1x1.png?raw=true" style="width:45px; height:auto; text-align: left; vertical-align: middle; margin-right:10px; margin-bottom:5px">Blue Drum Digital</h1>
-    </header>
+  <h1><img src="https://github.com/bdmmc/assets-images/blob/main/BD_logo1x1.png?raw=true" style="width:45px; height:auto; text-align: left; vertical-align: middle; margin-right:10px; margin-bottom:5px">Blue Drum Digital</h1>
+</header>
 <nav> <a href="https://www.bluedrummedia.com/">Home</a><a href="https://www.bluedrummedia.com/contact">Contact</a> </nav>
-<section id="contact">
+<div class="container">
+  <section class="intro">
     <h2>Contact</h2>
-
     <form 
         action="https://docs.google.com/forms/d/e/1FAIpQLSca66JfpZLFVcy5fSsCGK-oINTvrs-qoVjVvc5pzt0qpLDJ3w/formResponse" 
         method="POST" 
         target="_blank" 
         class="contact-form">
-
-        <div class="form-row">
-          <input type="text" name="entry.954487327" placeholder="Name" required>
-        </div>
-
-        <input type="email" name="entry.135111267" placeholder="Email Address" required>
-
-        <textarea name="entry.1649445465" rows="5" placeholder="How can we help you?" required></textarea>
-
-        <button type="submit">Submit</button>
-
+      <div class="form-row">
+        <input type="text" name="entry.954487327" placeholder="Name" required>
+      </div>
+      <input type="email" name="entry.135111267" placeholder="Email Address" required>
+      <textarea name="entry.1649445465" rows="5" placeholder="How can we help you?" required></textarea>
+      <button type="submit">Submit</button>
     </form>
-</section>
+  </section>
+</div>
 <footer>
-      <p>&copy; 2026 Blue Drum Media.  All Rights Reserved.</p>
-    </footer>
+  <p>&copy; 2026 Blue Drum Media. All Rights Reserved.</p>
+</footer>
 </body>
 </html>
-
-
